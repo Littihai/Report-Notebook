@@ -1,0 +1,8 @@
+D:\TSE_SEARCH\Report-Notebbok\Report-Notebbok\bin\Debug\Report-Notebbok.exe.config
+D:\TSE_SEARCH\Report-Notebbok\Report-Notebbok\obj\Debug\Report-Notebbok.csprojResolveAssemblyReference.cache
+D:\TSE_SEARCH\Report-Notebbok\Report-Notebbok\obj\Debug\Report_Notebbok.Properties.Resources.resources
+D:\TSE_SEARCH\Report-Notebbok\Report-Notebbok\obj\Debug\Report-Notebbok.csproj.GenerateResource.Cache
+D:\TSE_SEARCH\Report-Notebbok\Report-Notebbok\bin\Debug\Report-Notebbok.exe
+D:\TSE_SEARCH\Report-Notebbok\Report-Notebbok\bin\Debug\Report-Notebbok.pdb
+D:\TSE_SEARCH\Report-Notebbok\Report-Notebbok\obj\Debug\Report-Notebbok.exe
+D:\TSE_SEARCH\Report-Notebbok\Report-Notebbok\obj\Debug\Report-Notebbok.pdb
