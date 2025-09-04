@@ -1,0 +1,26 @@
+SELECT
+    @row_number := IFNULL(@row_number,0) + 1 AS NO,
+    DATE_FORMAT(app_reservation.begin, '%d/%m/%Y') AS borrow_date,
+    app_user.name AS borrower_name,
+    app_category.topic AS position,
+    app_type.topic AS department,
+    'ส่งคืนแล้ว' AS status,
+    'เกรียงศักดิ์' AS recorder,
+    app_rooms.name AS note
+FROM app_reservation
+LEFT JOIN app_rooms 
+    ON app_reservation.room_id = app_rooms.id
+LEFT JOIN app_user 
+    ON app_reservation.member_id = app_user.ID
+LEFT JOIN app_category 
+    ON app_reservation.department = app_category.category_id 
+   AND app_category.type = 'department'
+LEFT JOIN app_reservation_data 
+    ON app_reservation.id = app_reservation_data.reservation_id
+LEFT JOIN app_type 
+    ON app_type.category_id = app_reservation_data.value
+WHERE app_reservation.begin BETWEEN 
+        DATE_SUB(CURRENT_DATE, INTERVAL DAYOFMONTH(CURRENT_DATE)-1 DAY) - INTERVAL 1 MONTH
+        AND DATE_SUB(CURRENT_DATE, INTERVAL DAYOFMONTH(CURRENT_DATE) DAY)
+        AND app_user.ID LIKE 'TG%'
+ORDER BY app_reservation.begin;
